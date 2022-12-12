@@ -3,7 +3,7 @@ package util;
 public interface ConnectionDB {
     void closeConnect();
     void openConnect();
-    void testConnect();
+    boolean testConnect();
     void readIndex();
     void recordKey();
     void readOneRecordKey();

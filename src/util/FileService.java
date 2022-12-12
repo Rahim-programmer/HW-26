@@ -1,69 +1,28 @@
 package util;
 
 
+import State.KeyDB;
+import com.google.gson.Gson;
 
-public class FileService implements ConnectionDB{
-    @Override
-    public void closeConnect() {
-        System.out.print("Закрыто соединение с базой данных");
-    }
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 
-    @Override
-    public void openConnect() {
-        System.out.println("Открыто соединение с базой данных");
+public class FileService {
 
-    }
-
-    @Override
-    public void testConnect() {
-        System.out.println("Проверить есть ли соединение с базой");
-
-    }
-
-    @Override
-    public void readIndex() {
-        System.out.println("Считать одну запись (строку) по индексу");
-
-    }
-
-    @Override
-    public void recordKey() {
-        System.out.println("Проверить есть ли запись по такому-то ключу");
-    }
-
-    @Override
-    public void readOneRecordKey() {
-        System.out.println("Считать одну запись по ключу");
-    }
-
-    @Override
-    public void readSomeDatabase() {
-        System.out.println("Считать из базы некоторый набор записей");
-    }
-
-    @Override
-    public void findNumberDatabase() {
-        System.out.println("Узнать количество записей в базе");
-    }
-
-    @Override
-    public void entryDatabase() {
-        System.out.println("Добавить запись в базу");
-    }
-
-    @Override
-    public void updateValueIndex() {
-        System.out.println("Обновить значение записи по индексу");
-    }
-
-    @Override
-    public void updateEntryContentKey() {
-        System.out.println("Обновить содержимое записи по ключу");
-    }
-
-    public static void fileService(){
-
-    }
+    public static KeyDB[] fileService() {
+        Gson gson = new Gson();
+        String reads = "";
+        try {
+            Path path = Paths.get("src/data/key.json");
+            reads = Files.readString(path);
+    }catch (IOException exception){
+            exception.printStackTrace();
+        }
+        KeyDB[]keyDBS = gson.fromJson(reads,KeyDB[].class);
+        return keyDBS;
+        }
 }
 
 
