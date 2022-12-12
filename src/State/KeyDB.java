@@ -1,6 +1,6 @@
 package State;
 
-public class KeyDB {
+public class KeyDB{
     private String key;
     private String value;
 

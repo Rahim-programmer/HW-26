@@ -25,7 +25,9 @@ public class Database implements ConnectionDB{
 
     @Override
     public void readIndex() {
-        System.out.println("Считать одну запись (строку) по индексу");
+        KeyDB[]keyDBS = new  KeyDB[5];
+        System.out.println(keyDBS[1]);
+
 
     }
 

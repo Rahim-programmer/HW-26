@@ -1,9 +1,12 @@
+import State.KeyDB;
 import util.FileService;
 
+import java.util.Arrays;
 import java.util.Scanner;
 public class Main {
     public static void main(String[] args){
         FileService fileService = new FileService();
-        FileService.fileService();
+        KeyDB []keyDBS = FileService.fileService();
+//        System.out.println(Arrays.toString(keyDBS));
     }
 }
