@@ -1,5 +1,5 @@
 [
-  {"key": "K1", "value": "AAA,BBB,CCC"},
+  {"key": "K1", "value": "One"},
   {"key": "K2", "value": "AAA,BBB"},
   {"key": "K3", "value": "AAA,DDD"},
   {"key": "K4", "value": "ABC,2,01/01/2015"},
