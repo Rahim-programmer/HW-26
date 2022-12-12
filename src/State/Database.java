@@ -27,8 +27,6 @@ public class Database implements ConnectionDB{
     public void readIndex() {
         KeyDB[]keyDBS = new  KeyDB[5];
         System.out.println(keyDBS[1]);
-
-
     }
 
     @Override
